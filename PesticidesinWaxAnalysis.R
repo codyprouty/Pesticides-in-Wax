@@ -41,6 +41,7 @@ Sur <- glm(Survived ~ Treatment,
           family = binomial, Wax, method=brglmFit)
 anova(Sur, test = "Chisq")
 summary(Sur)
+#brglmFit is a bias-reduced glm. This is used when there is complete separation. In this case, all of the bees died in one of the treatment groups.
 ###
 
 #Graph of survival across treatments
